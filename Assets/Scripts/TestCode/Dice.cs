@@ -48,7 +48,9 @@ public class Dice : MonoBehaviour
 
     void FindSpace(int x, int y)
     {
-        if (x < 0)
+        if (x == 0 || y == 0)
+            Debug.Log("사분면에 속해있지 않습니다");
+        else if (x < 0)
         {
             if (y < 0)
                 Debug.Log(3);
